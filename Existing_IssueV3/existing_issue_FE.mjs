@@ -25,7 +25,7 @@ function predict(){
                 "title": title
             });
     
-            let fetch_url = "https://wrh1997.herokuapp.com/predict";
+            let fetch_url = "https://issue-labeler-plugin.herokuapp.com/predict";
             let settings = { method: "POST", body: issue_data, mode: "cors",
                 headers: {'Content-Type': 'application/json', 'Accept': 'application/json',"Content-Type": "application/json",
                 "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Methods": "GET,POST,OPTIONS,DELETE,PUT"} };
@@ -64,7 +64,7 @@ function predict(){
     
                 
                 if(issue_type!=label){
-                    document.getElementById("icon").src = "https://wrh1997.herokuapp.com/warning";
+                    document.getElementById("icon").src = "https://issue-labeler-plugin.herokuapp.com/warning";
                     if(span_check==1){
                         document.getElementById("right").remove();
                         span_check = 0;
@@ -76,7 +76,7 @@ function predict(){
                 }
                 else{
                     type_check = 1;
-                    document.getElementById("icon").src = "https://wrh1997.herokuapp.com/correct";
+                    document.getElementById("icon").src = "https://issue-labeler-plugin.herokuapp.com/correct";
                     if(span_check==-1){
                         document.getElementById("wrong").remove();
                         span_check = 0;
